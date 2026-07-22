@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARITAC Congreso 2026 - OG Image Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000;
+        }
+
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0a1f3a 0%, #1a3a5a 50%, #0a1f3a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .og-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .og-container::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(32, 201, 151, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .og-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        .og-logo {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            color: #d4af37;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .og-title {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(135deg, #ffffff 0%, #a0aec0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .og-subtitle {
+            font-size: 28px;
+            color: #4a90e2;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .og-tagline {
+            font-size: 20px;
+            color: #a0aec0;
+            margin-bottom: 30px;
+            max-width: 800px;
+            line-height: 1.4;
+        }
+
+        .og-date-location {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+            color: #f0f4f8;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .og-date-location span {
+            padding: 0 15px;
+            border-right: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .og-date-location span:last-child {
+            border-right: none;
+        }
+
+        .og-cta {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #4a90e2 0%, #2b6cb0 100%);
+            color: white;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.4);
+        }
+
+        .og-website {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            font-size: 14px;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <div class="og-content">
+            <div class="og-logo">ARITAC 60 ANIVERSARIO</div>
+            <div class="og-title">CONGRESO 2026</div>
+            <div class="og-subtitle">TRANSFORMACIÓN ORGANIZACIONAL</div>
+            <div class="og-tagline">Sinergia entre Talento y Tecnología</div>
+            
+            <div class="og-date-location">
+                <span>📅 20 y 21 de Agosto 2026</span>
+                <span>📍 Exhacienda del Carmen, Toluca</span>
+            </div>
+
+            <div class="og-cta">¡Regístrate Ahora!</div>
+        </div>
+
+        <div class="og-website">www.aritac.com.mx</div>
+    </div>
+
+    <script>
+        // Captura la pantalla como imagen PNG
+        setTimeout(() => {
+            // Este script está diseñado para ser capturado con herramientas como:
+            // - html2canvas
+            // - Puppeteer
+            // - Playwright
+            console.log('OG Image ready for capture');
+        }, 500);
+    </script>
+</body>
+</html>
