@@ -75,24 +75,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: 15px 5%;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
-    background: linear-gradient(to bottom, rgba(10,15,26,0.9), transparent);
+    background: linear-gradient(to bottom, rgba(10,15,26,0.95), rgba(10,15,26,0.7));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 20px;
 }
 
 .header-logo {
-    height: 50px;
+    height: 60px;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
 }
 
 .header-logo-60 {
-    height: 45px;
+    height: 60px;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.header-logo-60:hover {
+    transform: scale(1.05);
 }
 
 /* Typography */
@@ -225,6 +240,7 @@ main {
     cursor: pointer;
     box-shadow: 0 10px 20px var(--primary-glow);
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .cta-button:hover {
@@ -425,6 +441,20 @@ input:focus, select:focus {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .header {
+        padding: 12px 3%;
+        flex-wrap: wrap;
+    }
+
+    .header-logo-60 {
+        height: 50px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
     .event-details {
         flex-direction: column;
         gap: 15px;
