@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build & Distribution
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Netlify
+.netlify/
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# IDE settings
+.editorconfig
